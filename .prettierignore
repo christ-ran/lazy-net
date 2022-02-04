@@ -1,5 +1,6 @@
 # dependency
 /node_modules
+/test/node_modules
 
 # production
 /build
@@ -8,3 +9,4 @@
 # misc
 .env
 package-lock.json
+/test/package-lock.json
