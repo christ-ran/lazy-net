@@ -1,5 +1,6 @@
 # dependency
 /node_modules
+/test/node_modules
 
 # production
 /build
