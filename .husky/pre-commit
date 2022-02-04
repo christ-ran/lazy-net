@@ -22,7 +22,7 @@ false;
 
 echo "[2/3] Prettier check passed. ✨";
 
-npm run build:process || (
+npm run build || (
 tput setaf 1; echo "[2/3] Rollup build FAILED. \nIt's seems like something is going wrong with it.";
 false;
 )
