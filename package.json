@@ -1,5 +1,5 @@
 {
-  "name": "@koihii/lazy-net",
+  "name": "@Koihii/lazy-net",
   "version": "1.0.0",
   "description": "A lazy plugin for printing local network when starting server. I made this so you don't have to.",
   "main": "build/index.js",
