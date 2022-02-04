@@ -30,7 +30,7 @@ $ npm install @koihii/lazy-net
 
 ## Usage
 
-`lazy-net` supports both `ESModule` and 'CommonJS'. You can either:
+`lazy-net` supports both `ESModule` and `CommonJS`. You can either:
 
 ```js
 // with commonjs.
@@ -48,7 +48,11 @@ const lazyNet = require("@koihii/lazy-net");
 
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {});
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.write('Server's starting with Node.JS');
+  res.end();
+});
 
 server.listen(port, (error) => {
   if (error) throw error;
@@ -70,7 +74,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("Server starting with Express.js");
+  res.send("Server's starting with Express.js");
 });
 
 app.listen(port, () => {
