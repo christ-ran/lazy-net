@@ -1,6 +1,6 @@
 {
   "name": "@koihii/lazy-net",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lazy plugin for printing local network when starting server. I made this so you don't have to.",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -14,6 +14,10 @@
     "lint": "eslint *.ts lib/**/*.ts",
     "linting": "eslint --fix src/**/*.ts lib/**/*.ts",
     "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koihii/lazy-net.git"
   },
   "keywords": [
     "node",
