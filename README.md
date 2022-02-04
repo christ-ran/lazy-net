@@ -49,8 +49,8 @@ const lazyNet = require("@koihii/lazy-net");
 const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write('Server's starting with Node.JS');
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.write("Server's starting with Node.JS");
   res.end();
 });
 
