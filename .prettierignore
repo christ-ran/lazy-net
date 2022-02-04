@@ -1,0 +1,10 @@
+# dependency
+/node_modules
+
+# production
+/build
+/dist
+
+# misc
+.env
+package-lock.json

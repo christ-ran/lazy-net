@@ -1,0 +1,32 @@
+# Copyright(c) 2022-2023 Kha Tran.
+
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+
+# On committing to Github.
+
+echo "[🚧] On committing to Github through CI process, please be patient.";
+
+npm run lint || (
+tput setaf 1; echo "[0/3] ESLint check FAILED. \nThere's something wrong in source codes. \n(Please use 'npm run linting' to fix it or check the error logs).";
+false;
+)
+
+echo "[1/3] ESLint check passed. ✨";
+
+npm run pretty || (
+tput setaf 1; echo "[1/3] Prettier check FAILED. \nPlease format source codes before committing it.";
+false;
+)
+
+echo "[2/3] Prettier check passed. ✨";
+
+npm run build:process || (
+tput setaf 1; echo "[2/3] Rollup build FAILED. \nIt's seems like something is going wrong with it.";
+false;
+)
+
+echo "[3/3] Rollup build passed. ✨";
+
+echo "[✅] All stages has been passed. On the way to commit... ✨";
