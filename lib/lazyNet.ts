@@ -1,6 +1,6 @@
 import thisNet from "./findNet";
 
-function showOutline(port: string | number) {
+function showOutline(port: number) {
   const standardLog = [
     "  |  Your server is running on:",
     `  |    Local:            http://localhost:${port}`,
@@ -27,7 +27,7 @@ function showOutline(port: string | number) {
   }
 }
 
-function noShowOutline(port: string | number) {
+function noShowOutline(port: number) {
   const standardLog = [
     "\nYour server is running on:",
     `  Local:            http://localhost:${port}`,
@@ -40,7 +40,7 @@ function noShowOutline(port: string | number) {
   return;
 }
 
-function lazyNet(port: string | number, outline = false) {
+function lazyNet(port: number, outline = false) {
   if (outline) return showOutline(port);
   return noShowOutline(port);
 }
