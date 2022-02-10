@@ -1,6 +1,6 @@
 {
   "name": "@koihii/lazy-net",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lazy plugin for printing local network when starting server. I made this so you don't have to.",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -40,5 +40,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@koihii/lazy-outline": "^1.0.0"
   }
 }
