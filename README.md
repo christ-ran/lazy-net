@@ -43,22 +43,22 @@ import lazyNet from ('@koihii/lazy-net');
 When dealing with [Node.js](https://nodejs.org/en/) server.
 
 ```js
-const http = require("http");
-const lazyNet = require("@koihii/lazy-net");
+const http = require('http')
+const lazyNet = require('@koihii/lazy-net')
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.write("Server's starting with Node.JS");
-  res.end();
-});
+  res.writeHead(200, { 'Content-Type': 'application/json' })
+  res.write("Server's starting with Node.JS")
+  res.end()
+})
 
-server.listen(port, (error) => {
-  if (error) throw error;
-  layNet(port);
+server.listen(port, error => {
+  if (error) throw error
+  layNet(port)
   // lazyNet(port, true) 'if you want to print outline'.
-});
+})
 ```
 
 Before using with [Express.js](https://expressjs.com) server. You must [install Express.js](https://expressjs.com/en/starter/installing.html) framework first by using this command:
@@ -68,19 +68,19 @@ $ npm install express
 ```
 
 ```js
-const express = require("express");
-const app = express();
+const express = require('express')
+const app = express()
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000
 
-app.get("/", (req, res) => {
-  res.send("Server's starting with Express.js");
-});
+app.get('/', (req, res) => {
+  res.send("Server's starting with Express.js")
+})
 
 app.listen(port, () => {
-  layNet(port);
+  layNet(port)
   // lazyNet(port, true) 'if you want to print outline'.
-});
+})
 ```
 
 Follow [this link](https://github.com/Koihii/lazy-net/tree/main/test) to see sample files.

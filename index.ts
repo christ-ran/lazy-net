@@ -1,3 +1,3 @@
-import lazyNet from "./lib/lazyNet";
+import lazyNet from './lib/lazyNet'
 
-export default lazyNet;
+export default lazyNet
